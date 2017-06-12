@@ -1,0 +1,23 @@
+%h1 Listing item_tiers
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Multiplier
+      %th
+      %th
+      %th
+
+  %tbody
+    - @item_tiers.each do |item_tier|
+      %tr
+        %td= item_tier.name
+        %td= item_tier.multiplier
+        %td= link_to 'Show', item_tier
+        %td= link_to 'Edit', edit_item_tier_path(item_tier)
+        %td= link_to 'Destroy', item_tier, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Item tier', new_item_tier_path

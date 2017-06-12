@@ -1,0 +1,36 @@
+%nav.navbar.navbar-default{role:'navigation'}
+  .container
+    .container-fluid
+      / Brand and toggle get grouped for better mobile display
+      .navbar-header
+        %button.navbar-toggle.collapsed{"aria-expanded" => "false", "data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
+          %span.sr-only Toggle navigation
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+        .small-only
+          = link_to root_path, class: 'navbar-brand' do
+            .brand-text-small
+              .brand-text-small-image
+              .brand-text-small-text
+                Item Game
+      / Collect the nav links, forms, and other content for toggling
+      #bs-example-navbar-collapse-1.collapse.navbar-collapse
+        %ul.nav.navbar-nav
+          %li.dropdown
+            %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+              Create New Item
+              %span.caret
+            %ul.dropdown-menu
+              %li
+                =link_to "common item", common_items_path
+              %li
+                =link_to "fixed item stat", fixed_item_stats_path
+              %li
+                =link_to "item rarity", item_rarities_path
+              %li
+                =link_to "item tier", item_tiers_path
+              %li
+                =link_to "magic item name", magic_item_names_path
+              %li
+                =link_to "stat type", stat_types_path

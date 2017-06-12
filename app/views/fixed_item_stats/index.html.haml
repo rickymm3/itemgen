@@ -1,0 +1,31 @@
+%h1 Listing fixed_item_stats
+
+%table
+  %thead
+    %tr
+      %th Magic item name
+      %th Min
+      %th Max
+      %th Stat type
+      %th Is unique
+      %th Required tier
+      %th
+      %th
+      %th
+
+  %tbody
+    - @fixed_item_stats.each do |fixed_item_stat|
+      %tr
+        %td= fixed_item_stat.magic_item_name
+        %td= fixed_item_stat.min
+        %td= fixed_item_stat.max
+        %td= fixed_item_stat.stat_type
+        %td= fixed_item_stat.is_unique
+        %td= fixed_item_stat.required_tier
+        %td= link_to 'Show', fixed_item_stat
+        %td= link_to 'Edit', edit_fixed_item_stat_path(fixed_item_stat)
+        %td= link_to 'Destroy', fixed_item_stat, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Fixed item stat', new_fixed_item_stat_path

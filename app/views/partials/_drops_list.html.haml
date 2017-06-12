@@ -1,0 +1,13 @@
+%ul
+  -@generated_items.each do |item|
+    %li
+      =item.full_name
+      ="|"
+      ="#{item.stat_value} #{item.stat_type.name}"
+      ="|"
+      =item.item_slot.name
+      %ul
+        -unless item.player_item_stats.empty?
+          -item.player_item_stats.each do |stat|
+            %li
+              ="Stat Value: + #{stat.stat_value} #{stat.stat_type.name}"

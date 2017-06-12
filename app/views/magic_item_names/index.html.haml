@@ -1,0 +1,23 @@
+%h1 Listing magic_item_names
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Affix
+      %th
+      %th
+      %th
+
+  %tbody
+    - @magic_item_names.each do |magic_item_name|
+      %tr
+        %td= magic_item_name.name
+        %td= magic_item_name.affix
+        %td= link_to 'Show', magic_item_name
+        %td= link_to 'Edit', edit_magic_item_name_path(magic_item_name)
+        %td= link_to 'Destroy', magic_item_name, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Magic item name', new_magic_item_name_path

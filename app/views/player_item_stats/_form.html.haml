@@ -1,0 +1,19 @@
+= form_for @player_item_stat do |f|
+  - if @player_item_stat.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@player_item_stat.errors.count, "error")} prohibited this player_item_stat from being saved:"
+      %ul
+        - @player_item_stat.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :stat_type
+    = f.text_field :stat_type
+  .field
+    = f.label :stat_value
+    = f.number_field :stat_value
+  .field
+    = f.label :player_item
+    = f.text_field :player_item
+  .actions
+    = f.submit 'Save'

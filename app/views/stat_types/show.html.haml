@@ -1,0 +1,9 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @stat_type.name
+
+= link_to 'Edit', edit_stat_type_path(@stat_type)
+\|
+= link_to 'Back', stat_types_path

@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @item_tier.name
+%p
+  %b Multiplier:
+  = @item_tier.multiplier
+
+= link_to 'Edit', edit_item_tier_path(@item_tier)
+\|
+= link_to 'Back', item_tiers_path

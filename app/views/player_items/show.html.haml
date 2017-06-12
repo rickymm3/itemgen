@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Full name:
+  = @player_item.full_name
+%p
+  %b Item rarity:
+  = @player_item.item_rarity
+%p
+  %b User:
+  = @player_item.user
+
+= link_to 'Edit', edit_player_item_path(@player_item)
+\|
+= link_to 'Back', player_items_path

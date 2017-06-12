@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Stat type:
+  = @player_item_stat.stat_type
+%p
+  %b Stat value:
+  = @player_item_stat.stat_value
+%p
+  %b Player item:
+  = @player_item_stat.player_item
+
+= link_to 'Edit', edit_player_item_stat_path(@player_item_stat)
+\|
+= link_to 'Back', player_item_stats_path

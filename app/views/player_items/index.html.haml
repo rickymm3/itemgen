@@ -1,0 +1,27 @@
+
+%h1 Listing player_items
+
+%table
+  %thead
+    %tr
+      %th Full name
+      %th Item rarity
+      %th User
+      %th
+      %th
+      %th
+
+  %tbody
+    - @player_items.each do |player_item|
+      %tr
+        %td= player_item.full_name
+        %td= player_item.item_rarity
+        %td= player_item.user
+        %td= link_to 'Show', player_item
+        %td= link_to 'Edit', edit_player_item_path(player_item)
+        %td= link_to 'Destroy', player_item, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+
+= link_to 'New Player item', new_player_item_path

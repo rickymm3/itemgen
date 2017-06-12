@@ -1,0 +1,11 @@
+=form_tag("/roll/generate_drops", method: 'post', remote:true) do
+  = label_tag 'monster_level'
+  = text_field_tag 'monster_level'
+  = label_tag 'monster_difficulty'
+  = text_field_tag 'monster_difficulty'
+  = label_tag 'magic_find'
+  = text_field_tag 'magic_find'
+  = submit_tag 'Save'
+
+#drops_list
+  No Drops - Click Generate

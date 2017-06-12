@@ -1,0 +1,21 @@
+%h1 Listing item_rarities
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th
+      %th
+      %th
+
+  %tbody
+    - @item_rarities.each do |item_rarity|
+      %tr
+        %td= item_rarity.name
+        %td= link_to 'Show', item_rarity
+        %td= link_to 'Edit', edit_item_rarity_path(item_rarity)
+        %td= link_to 'Destroy', item_rarity, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Item rarity', new_item_rarity_path

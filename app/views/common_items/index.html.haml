@@ -1,0 +1,32 @@
+%h1 Listing common_items
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Min
+      %th Max
+      %th Tier
+      %th Stat type
+      %th Item Slot
+      %th
+      %th
+      %th
+
+  %tbody
+    - @common_items.each do |common_item|
+      %tr
+        %td= common_item.name
+        %td= common_item.min
+        %td= common_item.max
+        %td= common_item.item_tier
+        %td= common_item.stat_type
+        %td= common_item.item_slot
+
+        %td= link_to 'Show', common_item
+        %td= link_to 'Edit', edit_common_item_path(common_item)
+        %td= link_to 'Destroy', common_item, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Common item', new_common_item_path

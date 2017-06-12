@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @common_item.name
+%p
+  %b Min:
+  = @common_item.min
+%p
+  %b Max:
+  = @common_item.max
+%p
+  %b Tier:
+  = @common_item.item_tier
+%p
+  %b Stat type:
+  = @common_item.stat_type
+
+= link_to 'Edit', edit_common_item_path(@common_item)
+\|
+= link_to 'Back', common_items_path

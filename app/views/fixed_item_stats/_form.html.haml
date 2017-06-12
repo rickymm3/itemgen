@@ -1,0 +1,28 @@
+= form_for @fixed_item_stat do |f|
+  - if @fixed_item_stat.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@fixed_item_stat.errors.count, "error")} prohibited this fixed_item_stat from being saved:"
+      %ul
+        - @fixed_item_stat.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :magic_item_name
+    = f.text_field :magic_item_name
+  .field
+    = f.label :min
+    = f.number_field :min
+  .field
+    = f.label :max
+    = f.number_field :max
+  .field
+    = f.label :stat_type
+    = f.text_field :stat_type
+  .field
+    = f.label :is_unique
+    = f.check_box :is_unique
+  .field
+    = f.label :required_tier
+    = f.number_field :required_tier
+  .actions
+    = f.submit 'Save'

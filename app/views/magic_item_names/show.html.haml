@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @magic_item_name.name
+%p
+  %b Affix:
+  = @magic_item_name.affix
+
+= link_to 'Edit', edit_magic_item_name_path(@magic_item_name)
+\|
+= link_to 'Back', magic_item_names_path

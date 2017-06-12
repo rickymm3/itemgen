@@ -1,0 +1,16 @@
+= form_for @player_item do |f|
+  - if @player_item.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@player_item.errors.count, "error")} prohibited this player_item from being saved:"
+      %ul
+        - @player_item.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :monster_level
+    = f.text_field :monster_level
+  .field
+    = f.label :monster_difficulty
+    = f.text_field :monster_difficulty
+  .actions
+    = f.submit 'Save'

@@ -1,0 +1,21 @@
+%h1 Listing stat_types
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th
+      %th
+      %th
+
+  %tbody
+    - @stat_types.each do |stat_type|
+      %tr
+        %td= stat_type.name
+        %td= link_to 'Show', stat_type
+        %td= link_to 'Edit', edit_stat_type_path(stat_type)
+        %td= link_to 'Destroy', stat_type, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Stat type', new_stat_type_path

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  min: 1
+  max: 1
+  tier_id: 
+  stat_type_id: 
+
+two:
+  name: MyString
+  min: 1
+  max: 1
+  tier_id: 
+  stat_type_id: 
